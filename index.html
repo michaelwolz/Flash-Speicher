@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>Flash-Speicher</title>
 
@@ -110,6 +111,68 @@
         <section>
             <section>
                 <h3>Architekturen</h3>
+                <aside class="notes">
+                    <ul>
+                        <li class="fragment fade-in">Zwei gängige
+                            Architekturen
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>NAND-Flash vs. NOR-Flash</h3>
+                <table class="fragment fade-out">
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>NAND</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <ul>
+                    <li class="fragment fade-in">Unterschiedliche interne
+                        Verschaltung der
+                        Speicherzellen
+                    </li>
+                    <li class="fragment fade-in">
+                        Unterschiedliche Speicherdichte
+                    </li>
+                    <li class="fragment fade-in">
+                        Unterschiedliche Zugriffsgeschwindigkeit
+                    </li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Unterschied in Verschaltung -> unters.
+                            Speicherdichte, Zugriffsgeschwindigkeit
+                        </li>
+                        <li>Speicherzellen als Matrix organisiert</li>
+                        <li>1. Koordinate: Addressleitung</li>
+                        <li>2. Koordinate: Datenleitung</li>
+                        <li>Unterschied der Architekturen in Realisierung der
+                            Datenleitung
+                        </li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h3>NAND-Flash</h3>
@@ -152,9 +215,11 @@
             {src: 'plugin/markdown/markdown.js'},
             {src: 'plugin/notes/notes.js', async: true},
             {
-                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
             }
         ]
     });
