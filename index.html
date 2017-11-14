@@ -8,7 +8,7 @@
     <title>Flash-Speicher</title>
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/theme/white.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -33,29 +33,36 @@
             <p>Lukas Jung & Michael Wolz</p>
             <p>15. November 2017</p>
             <aside class="notes">
-                Grundlagen, Geschichte, Funktionsprinzip, Architekturen, Löschen, Vor- und Nachteile
+                Grundlagen, Geschichte, Funktionsprinzip, Architekturen,
+                Löschen, Vor- und Nachteile
             </aside>
         </section>
         <section id="grundlagen">
             <h3>Grundlagen</h3>
             <ul>
                 <li>Genaue Bezeichnung: <strong>Flash-EEPROM</strong></li>
-                <li>Nicht flüchtiger Speicher mit niedrigem Energieverbrauch</li>
-                <li>Byteweise adressierbar und blockweise beschreib- & löschbar</li>
+                <li>Nicht flüchtiger Speicher mit niedrigem Energieverbrauch
+                </li>
+                <li>Byteweise adressierbar und blockweise beschreib- &
+                    löschbar
+                </li>
                 <li>Beispiele: SSDs, USB-Sticks, Speicherkarten, Smartphone</li>
             </ul>
             <div class="fragment fade-in" style="margin-top: 40px">
                 <img src="images/SSD.jpg">
-                <img src="https://media.giphy.com/media/nJfOVgxkOcgpO/giphy.gif" height="100px">
+                <img src="https://media.giphy.com/media/nJfOVgxkOcgpO/giphy.gif"
+                     height="100px">
                 <img src="images/memory-card.jpg">
-                <img src="https://media.giphy.com/media/10OCwSgELjXdq8/giphy.gif" height="100px">
+                <img src="https://media.giphy.com/media/10OCwSgELjXdq8/giphy.gif"
+                     height="100px">
             </div>
         </section>
         <section>
             <section id="geschichte-1">
                 <h3>Geschichte</h3>
                 <ul>
-                    <li>1980: NOR-Flash Speicher wird von Toshiba entwickelt</li>
+                    <li>1980: NOR-Flash Speicher wird von Toshiba entwickelt
+                    </li>
                     <li>1984: NOR-Flash Speicher wird veröffentlicht</li>
                     <li>1084: Intel folgt der Entwicklung</li>
                     <ul>
@@ -70,10 +77,12 @@
             <section id="geschichte-2">
                 <h3>Geschichte</h3>
 
-                <p>Wieso <i class="fa fa-bolt yellow"></i>Flash<i class="fa fa-bolt yellow"></i>-Speicher?
+                <p>Wieso <i class="fa fa-bolt yellow"></i>Flash<i
+                        class="fa fa-bolt yellow"></i>-Speicher?
                 </p>
 
-                <p class="fragment fade-in">Löschvorgang erinnerte Entwickler an Kamerablitz</p>
+                <p class="fragment fade-in">Löschvorgang erinnerte Entwickler an
+                    Kamerablitz</p>
             </section>
         </section>
         <section>
@@ -81,28 +90,40 @@
                 <h3>Funktionsprinzip</h3>
 
                 <ul>
-                    <li>Bits werden in Speichereinheit in Form von elekt. Ladungen gespeichert</li>
+                    <li>Bits werden in Speichereinheit in Form von elekt.
+                        Ladungen gespeichert
+                    </li>
                     <li>Zwei verschiedene Technologien:</li>
                     <ul class="fragment fade-in">
                         <li>Floating-Gate</li>
                         <li>Charge-Trapping-Speicherelement<br>
                             <small>
-                                <i class="fa fa-plus green" style="margin-right: 10px"></i> höhere Speicherdichte<br>
+                                <i class="fa fa-plus green"
+                                   style="margin-right: 10px"></i> höhere
+                                Speicherdichte<br>
                             </small>
                         </li>
                     </ul>
                 </ul>
             </section>
-            <section id="funktionsprinzip-floating-gate" data-background-image="images/Floating-Gate.svg"
+            <section id="funktionsprinzip-floating-gate"
+                     data-background-image="images/Floating-Gate.svg"
                      data-background-size="contain">
                 <h3>Floating-Gate-Transistor (FGMOS)</h3>
                 <aside class="notes">
                     <ul>
-                        <li>Floating-Gate: spez. Transistoren für nichtflüchtige Speicher</li>
+                        <li>Floating-Gate: spez. Transistoren für nichtflüchtige
+                            Speicher
+                        </li>
                         <li>Feldeffektransitoren aus Silicium</li>
-                        <li>Schreibvorgang benötigt deutlich höhere Spannung (z.B. 10V vs 3.3V)</li>
-                        <li>Ladung auf Gate wird beeinfluss: elektrische Leitfähigkeit zwischen S D beeinflusst</li>
-                        <li>zunehmende Verwendung von Chargepipes (weniger Prozessschritte bei der Herstellung,
+                        <li>Schreibvorgang benötigt deutlich höhere Spannung
+                            (z.B. 10V vs 3.3V)
+                        </li>
+                        <li>Ladung auf Gate wird beeinfluss: elektrische
+                            Leitfähigkeit zwischen S D beeinflusst
+                        </li>
+                        <li>zunehmende Verwendung von Chargepipes (weniger
+                            Prozessschritte bei der Herstellung,
                             leichteren Integrationsmöglichkeit)
                         </li>
                     </ul>
@@ -111,11 +132,19 @@
             <section id="funktionsprinzip-3">
                 <h3>Funktionsprinzip</h3>
                 <ul>
-                    <li>Anfangs: ein Bit je Zelle, da nur zwei Ladungszustände unterschieden wurden</li>
-                    <li>Mittlerweile: Mult-Level-Cell &rarr; speichern mehrerer Bits pro Transistor</li>
+                    <li>Anfangs: ein Bit je Zelle, da nur zwei Ladungszustände
+                        unterschieden wurden
+                    </li>
+                    <li>Mittlerweile: Mult-Level-Cell &rarr; speichern mehrerer
+                        Bits pro Transistor
+                    </li>
                     <ul>
-                        <li>Floating-Gates: unterschiedliche Leitfähigkeit bei versch. Ladungszuständen</li>
-                        <li>Floating-Gates: unterschiedliche Leitfähigkeit bei versch. Ladungszuständen</li>
+                        <li>Floating-Gates: unterschiedliche Leitfähigkeit bei
+                            versch. Ladungszuständen
+                        </li>
+                        <li>Floating-Gates: unterschiedliche Leitfähigkeit bei
+                            versch. Ladungszuständen
+                        </li>
                     </ul>
                 </ul>
             </section>
@@ -125,53 +154,83 @@
                 <h3>Architekturen</h3>
                 <aside class="notes">
                     <ul>
-                        <li class="fragment fade-in">Zwei gängige
+                        <li>Zwei gängige
                             Architekturen
                         </li>
                     </ul>
                 </aside>
             </section>
             <section>
-                <h3>NAND-Flash vs. NOR-Flash</h3>
-                <table class="fragment fade-out">
+                <table class="fragment fade-in">
                     <tr>
-                        <th>A</th>
-                        <th>B</th>
-                        <th>NAND</th>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>0</td>
+                        <th>
+                            <table border="1">
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>NAND</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th style="vertical-align: middle">
+                            VS
+                        </th>
+                        <th>
+                            <table border="1">
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>NOR</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </th>
                     </tr>
                 </table>
-                <ul>
-                    <li class="fragment fade-in">Unterschiedliche interne
-                        Verschaltung der
-                        Speicherzellen
-                    </li>
-                    <li class="fragment fade-in">
-                        Unterschiedliche Speicherdichte
-                    </li>
-                    <li class="fragment fade-in">
-                        Unterschiedliche Zugriffsgeschwindigkeit
-                    </li>
-                </ul>
+                <p class="fragment fade-in">Unterschiedliche interne
+                    Verschaltung der
+                    Speicherzellen hat Einfluss auf Speicherdichte und
+                    Zugriffsgeschwindigkeit
+                </p>
                 <aside class="notes">
                     <ul>
                         <li>Unterschied in Verschaltung -> unters.
@@ -180,7 +239,8 @@
                         <li>Speicherzellen als Matrix organisiert</li>
                         <li>1. Koordinate: Addressleitung</li>
                         <li>2. Koordinate: Datenleitung</li>
-                        <li>Unterschied der Architekturen in Realisierung der
+                        <li>Unterschied der Architekturen in Realisierung
+                            der
                             Datenleitung
                         </li>
                     </ul>
@@ -188,9 +248,37 @@
             </section>
             <section>
                 <h3>NAND-Flash</h3>
+                <p class="fragment fade-in">Reihenschaltung der
+                    Speicherzellen</p>
+                <p class="fragment fade-in">Eine Reihe bildet eine
+                    Datenleitung</p>
+                <p class="fragment fade-in">Sequentielles Lesen und
+                    Schreiben</p>
+                <p class="fragment fade-in">Platzeffizient aber langsam</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Speicherzellen in Gruppen (1024)
+                            hintereinandergeschaltet
+                        </li>
+                        <li>Eine Gruppe muss immer im ganzen bearbeitet werden
+                        </li>
+                        <li>Geringe Anzahl an Datenleitungen benötigt weniger
+                            Platz
+                        </li>
+                        <li>Bietet mehr Speicher pro Raum</li>
+                        <li>Langsamer im Vergleich zu NOR</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h3>NOR-Flash</h3>
+                <p class="fragment fade-in">Reihenschaltung der
+                    Speicherzellen</p>
+
+            </section>
+            <section>
+                <img style="border: 0px !important" width="100%" height="100%"
+                     src="images/architektur.png">
             </section>
         </section>
         <section>
@@ -201,15 +289,20 @@
         </section>
         <section>
             <h2>Vielen Dank für Ihre Aufmerksamkeit</h2>
-            <img src="https://media.giphy.com/media/pVe8bu4l12iT6/giphy.gif" width="300px">
+            <img src="https://media.giphy.com/media/pVe8bu4l12iT6/giphy.gif"
+                 width="300px">
         </section>
         <section id="quellenangaben">
             <ul style="font-size: 25px">
                 <li>https://de.wikipedia.org/wiki/Flash-Speicher</li>
                 <li>https://en.wikipedia.org/wiki/Flash_memory</li>
-                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html</li>
+                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html
+                </li>
                 <li>https://de.wikipedia.org/wiki/Floating-Gate-Transistor</li>
                 <li>https://www.wikiwand.com/de/Charge-Trapping-Speicher</li>
+                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html
+                </li>
+                <li>http://www.iue.tuwien.ac.at/phd/windbacher/node14.html</li>
             </ul>
         </section>
     </div>
