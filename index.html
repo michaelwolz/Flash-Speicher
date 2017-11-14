@@ -275,20 +275,167 @@
             </section>
             <section>
                 <h3>NOR-Flash</h3>
-                <p class="fragment fade-in">Reihenschaltung der
+                <p class="fragment fade-in">Parallelschaltung der
                     Speicherzellen</p>
-
+                <p class="fragment fade-in">Wahlfreier Zugriff</p>
+                <p class="fragment fade-in">Bietet kurze Zugriffszeiten</p>
+                <p class="fragment fade-in">Weniger kompakt</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Parallel geschaltete Speicherzellen</li>
+                        <li>Zugriff wahlfrei, direkt, parallel</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <img style="border: 0px !important" width="100%" height="100%"
                      src="images/architektur.png">
+                <aside class="notes">
+                    <ul>
+                        <li>NAND: Daten und Addressleitungen
+                            zusammengelegt(Multiplex)
+                        </li>
+                        <li>NOR: Getrennte, schneller aber mehr pins -> größer
+                        </li>
+                        <li>Speicherdichte um Faktor 32 besser als NOR</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Nachteile</h3>
+                <p class="fragment fade-in">Begrenzte Lebensdauer</p>
+                <p class="fragment fade-in">Lebensdauer abhängig von Zustand der
+                    Oxidschicht innerhalb der Transistoren, speziell am
+                    Floating-Gate</p>
+                <p class="fragment fade-in">Asymmetrie bei Lese- und
+                    Schreiboperationen</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Maximale Anzahl an Löschzyklen</li>
+                        <li>10k-100k NOR / < 2 Mi für NAND</li>
+                        <li>Lesezyklen äquivalent zu Löschzyklen, da zuvor
+                            gelöscht werden muss
+                        </li>
+                        <li>Schäden entstehen beim abfließen des Stromes am FG
+                        </li>
+                        <li>Schreibzugriff erheblich langsamer als Lesezugriff
+                        </li>
+                        <li>Zusätzliche Verzögerung durch blockweise-Schreiben
+                        </li>
+                    </ul>
+                </aside>
             </section>
         </section>
         <section>
-            <h3>Löschen von Daten</h3>
+            <section>
+                <h3>Löschen von Daten</h3>
+            </section>
+            <section>
+                <img style="border: 0px !important" width="450px"
+                     class="fragment fade-in" src="images/flash_ram_cell.png">
+                <p class="fragment fade-in">Information wird im Floating-Gate
+                    gespeichert</p>
+                <p class="fragment fade-in">Die Oxidschicht wird bei einem
+                    Löschzyklus beschädigt</p>
+                <p class="fragment fade-in">Anzahl an Löschzyklen variiert stark
+                    je nach Hersteller, Technik und Strukturgröße</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Elektronen durchtunneln(mit hoher Spannung) die
+                            Oxidschicht beim Löschvorgang
+                        </li>
+                        <li>Die das FG umgebende Oxidschicht wird degeneriert,
+                            die Isolation leidet
+                        </li>
+                        <li>Dann ist die Möglichkeit Elektronen im FG zu halten
+                            verloren -> keine Info mehr
+                        </li>
+                        <li>Anzahl an Löschzyklen abhängig von Hersteller,
+                            Technik(MLC-, SLC-NAND, NOR), Strukturgröße(50-25nm)
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Defektmanagement - Ansteuerlogik</h3>
+                <p class="fragment fade-in">Fehlererkennungs- und
+                    Fehlerkorrekturcodes auf Block-Ebene</p>
+                <p class="fragment fade-in">Ansteuerlogik zeigt Fehler an</p>
+                <p class="fragment fade-in">Treibersoftware markiert defekte
+                    Blöcke in einer Defekttabelle</p>
+                <p class="fragment fade-in">Berechnung und Steuerung der
+                    Schutzbits innerhalb der Ansteuerlogik</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Speicherung zusätzlicher Bits zu jedem Block um
+                            Ausfälle zu erkennen
+                        </li>
+                        <li>z.B. Hamming-Codes, BCH-Codes, Reed-Solomon-Codes
+                        </li>
+                        <li>Einzelne Bits korrigierbar</li>
+                        <li>Fehler über mehrere werden nicht zuverlässig
+                            erkennbar
+                        </li>
+                        <li>Verwaltung der Defekttabelle in gesondertem
+                            Bereich
+                        </li>
+                        <li>Berechnung/Steuerung der Codes nicht im Flash</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Defektmanagement - Software</h3>
+                <p class="fragment fade-in">Gleichmäßige Verteilung der Operationen über die Treibersoftware</p>
+                <p class="fragment fade-in">Verwendung von "Wear-Leveling-Algorithmen" zur gleichmäßigen Abnutzung</p>
+                <p class="fragment fade-in">Varianten für Treiber- und Dateisystemebene</p>
+                <aside class="notes">
+                    <ul>
+                        <li>Schreib- und Löschaktionen möglichst gleichmäßig über den Speicherbereich eines Bausteins verteilen</li>
+                        <li>Negativbeispiel wäre das häufige Beschreiben eines Speicherbereiches</li>
+                    </ul>
+                </aside>
+            </section>
         </section>
         <section>
-            <h3>Vor- und Nachteile</h3>
+            <section>
+                <h3>Vor- und Nachteile</h3>
+            </section>
+            <section>
+                <p class="fragment fade-in">Nichtflüchtiges Speichermedium</p>
+                <p class="fragment fade-in">Mechanische Robustheit</p>
+                <p class="fragment fade-in">Geringer Energieverbrauch</p>
+                <p class="fragment fade-in">Niedrige Wärmeentwicklung</p>
+                <p class="fragment fade-in">Geräuschlos</p>
+                <p class="fragment fade-in">Geschwindigkeit</p>
+                 <aside class="notes">
+                    <ul>
+                        <li>Konkurrenz zu Festplatten, optischen Speichern</li>
+                        <li>Wenig Stoßempflindlich</li>
+                        <li>Zulässige Höchsttemperatur von 100°C</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <img src="images/vergleich.jpg">
+            </section>
+            <section>
+                <aside class="notes">
+                    Multi-Level-Cell (MLC) und Single-Level-Cell (SLC)
+                </aside>
+            </section>
+            <section>
+                <p class="fragment fade-in">Langsamer als nicht-flüchtiger Speicher</p>
+                <p class="fragment fade-in">NAND ist kompakt, aber langsam</p>
+                <p class="fragment fade-in">NOR ist nur im Schreiben langsam, aber groß</p>
+
+                 <aside class="notes">
+                    <ul>
+                        <li>Kann nicht mit flüchtigem Speicher mithalten, z.B. RAM/CPU Cache</li>
+                        <li>Tradeoff zwischen NOR und NAND-Speichertypen</li>
+                        <li></li>
+                    </ul>
+                </aside>
+            </section>
         </section>
         <section>
             <h2>Vielen Dank für Ihre Aufmerksamkeit</h2>
@@ -304,6 +451,8 @@
                 <li>https://de.wikipedia.org/wiki/Floating-Gate-Transistor</li>
                 <li>https://de.wikipedia.org/wiki/Charge-Trapping-Speicher</li>
                 <li>http://www.iue.tuwien.ac.at/phd/windbacher/node14.html</li>
+                <li>http://www.storagereview.com/introduction_ram_disks</li>
+                <li>http://aturing.umcs.maine.edu/~meadow/courses/cos335/Toshiba%20NAND_vs_NOR_Flash_Memory_Technology_Overviewt.pdf</li>
             </ul>
         </section>
     </div>
