@@ -1,15 +1,27 @@
 .red {
     color: #d11141
 }
+
 .green {
     color: #00b159
 }
+
 .blue {
     color: #00aedb
 }
+
 .orange {
     color: #f37735
 }
+
 .yellow {
     color: #ffc425
+}
+
+th, td {
+    text-align: center !important;
+}
+
+tr > td {
+    border: solid 1px !important;
 }
