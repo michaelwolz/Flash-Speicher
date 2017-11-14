@@ -42,13 +42,13 @@
                 <li>Genaue Bezeichnung: <strong>Flash-EEPROM</strong></li>
                 <li>Nicht flüchtiger Speicher mit niedrigem Energieverbrauch</li>
                 <li>Byteweise adressierbar und blockweise beschreib- & löschbar</li>
-                <li>Beispiele: SSDs, USB-Sticks, Speicherkarten, Smartphone</li>
+                <li>Beispiele: SSDs, USB-Sticks, Speicherkarten, Smartphones</li>
             </ul>
             <div class="fragment fade-in" style="margin-top: 40px">
                 <img src="images/SSD.jpg">
-                <img src="https://media.giphy.com/media/nJfOVgxkOcgpO/giphy.gif" height="100px">
+                <img src="images/usb-stick.jpg">
                 <img src="images/memory-card.jpg">
-                <img src="https://media.giphy.com/media/10OCwSgELjXdq8/giphy.gif" height="100px">
+                <img src="images/smartphone.jpg">
             </div>
         </section>
         <section>
@@ -86,16 +86,14 @@
                     <ul class="fragment fade-in">
                         <li>Floating-Gate</li>
                         <li>Charge-Trapping-Speicherelement<br>
-                            <small>
-                                <i class="fa fa-plus green" style="margin-right: 10px"></i> höhere Speicherdichte<br>
-                            </small>
+                            <i class="fa fa-plus green" style="margin-right: 10px"></i> höhere Speicherdichte<br>
                         </li>
                     </ul>
                 </ul>
             </section>
             <section id="funktionsprinzip-floating-gate" data-background-image="images/Floating-Gate.svg"
                      data-background-size="contain">
-                <h3>Floating-Gate-Transistor (FGMOS)</h3>
+                <!--<h3>Floating-Gate-Transistor (FGMOS)</h3>-->
                 <aside class="notes">
                     <ul>
                         <li>Floating-Gate: spez. Transistoren für nichtflüchtige Speicher</li>
@@ -115,8 +113,33 @@
                     <li>Mittlerweile: Mult-Level-Cell &rarr; speichern mehrerer Bits pro Transistor</li>
                     <ul>
                         <li>Floating-Gates: unterschiedliche Leitfähigkeit bei versch. Ladungszuständen</li>
-                        <li>Floating-Gates: unterschiedliche Leitfähigkeit bei versch. Ladungszuständen</li>
+                        <li>Charge-Trap: ein Bit in Drain, ein Bit in Source<br>&rarr; Auslesen via Richtungsänderung
+                            des Stroms
+                        </li>
                     </ul>
+                </ul>
+            </section>
+            <section id="funktionsprinzip-speichern">
+                <h3>Speichern, Lesen & Löschen</h3>
+                <div style="margin-top: 50px">
+                    <img src="images/write.png" width="45%" style="margin-right: 40px"><img src="images/delete.png"
+                                                                                            width="45%">
+                </div>
+            </section>
+        </section>
+        <section id="ansteuerung">
+            <section>
+                <h3>Ansteuerung</h3>
+                <ul>
+                    <li>Anzahl der Speicherelemente abhängig von Speichergröße</li>
+                    <li>Bytes o. Worte können einzeln adressiert werden</li>
+                    <ul>
+                        <li>einige Architekturen einzeln beschreibar</li>
+                        <li>Löschen ausschließlich Sektorweise (1/4, 1/8, 1/16, ...)<br>
+                            &rarr; Alle Bits werden auf 1 gesetzt
+                        </li>
+                    </ul>
+                    <li>Wiederbeschreiben erfordert immer Löschoperation</li>
                 </ul>
             </section>
         </section>
@@ -264,15 +287,13 @@
                  width="300px">
         </section>
         <section id="quellenangaben">
+            <h3>Quellen</h3>
             <ul style="font-size: 25px">
                 <li>https://de.wikipedia.org/wiki/Flash-Speicher</li>
                 <li>https://en.wikipedia.org/wiki/Flash_memory</li>
-                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html
-                </li>
+                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html</li>
                 <li>https://de.wikipedia.org/wiki/Floating-Gate-Transistor</li>
-                <li>https://www.wikiwand.com/de/Charge-Trapping-Speicher</li>
-                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html
-                </li>
+                <li>https://de.wikipedia.org/wiki/Charge-Trapping-Speicher</li>
                 <li>http://www.iue.tuwien.ac.at/phd/windbacher/node14.html</li>
             </ul>
         </section>
@@ -287,7 +308,6 @@
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
-        center: false,
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},

@@ -25,3 +25,12 @@ th, td {
 tr > td {
     border: solid 1px !important;
 }
+
+.reveal ul > ul  {
+    font-size: 80%;
+    margin-bottom: 30px
+}
+
+.reveal li {
+    margin-bottom: 15px;
+}
