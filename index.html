@@ -164,7 +164,7 @@
                 </aside>
             </section>
             <section>
-                <table class="fragment fade-in">
+                <table>
                     <tr>
                         <th>
                             <table border="1">
@@ -251,13 +251,15 @@
             </section>
             <section>
                 <h3>NAND-Flash</h3>
-                <p class="fragment fade-in">Reihenschaltung der
-                    Speicherzellen</p>
-                <p class="fragment fade-in">Eine Reihe bildet eine
-                    Datenleitung</p>
-                <p class="fragment fade-in">Sequentielles Lesen und
-                    Schreiben</p>
-                <p class="fragment fade-in">Platzeffizient aber langsam</p>
+                <ul>
+                    <li class="fragment fade-in">Reihenschaltung der
+                    Speicherzellen</li>
+                    <li class="fragment fade-in">Eine Reihe bildet eine
+                    Datenleitung</li>
+                    <li class="fragment fade-in">Sequentielles Lesen und
+                    Schreiben</li>
+                    <li class="fragment fade-in">Platzeffizient aber langsam</li>
+                </ul>
                 <aside class="notes">
                     <ul>
                         <li>Speicherzellen in Gruppen (1024)
@@ -275,11 +277,13 @@
             </section>
             <section>
                 <h3>NOR-Flash</h3>
-                <p class="fragment fade-in">Parallelschaltung der
-                    Speicherzellen</p>
-                <p class="fragment fade-in">Wahlfreier Zugriff</p>
-                <p class="fragment fade-in">Bietet kurze Zugriffszeiten</p>
-                <p class="fragment fade-in">Weniger kompakt</p>
+                <ul>
+                    <li class="fragment fade-in">Parallelschaltung der
+                    Speicherzellen</li>
+                    <li class="fragment fade-in">Wahlfreier Zugriff</li>
+                    <li class="fragment fade-in">Bietet kurze Zugriffszeiten</li>
+                    <li class="fragment fade-in">Weniger kompakt</li>
+                </ul>
                 <aside class="notes">
                     <ul>
                         <li>Parallel geschaltete Speicherzellen</li>
@@ -303,12 +307,14 @@
             </section>
             <section>
                 <h3>Nachteile</h3>
-                <p class="fragment fade-in">Begrenzte Lebensdauer</p>
-                <p class="fragment fade-in">Lebensdauer abhängig von Zustand der
+                <ul>
+                    <li class="fragment fade-in">Begrenzte Lebensdauer</li>
+                    <li class="fragment fade-in">Lebensdauer abhängig von Zustand der
                     Oxidschicht innerhalb der Transistoren, speziell am
-                    Floating-Gate</p>
-                <p class="fragment fade-in">Asymmetrie bei Lese- und
-                    Schreiboperationen</p>
+                    Floating-Gate</li>
+                    <li class="fragment fade-in">Asymmetrie bei Lese- und
+                    Schreiboperationen</li>
+                </ul>
                 <aside class="notes">
                     <ul>
                         <li>Maximale Anzahl an Löschzyklen</li>
@@ -332,13 +338,15 @@
             </section>
             <section>
                 <img style="border: 0px !important" width="450px"
-                     class="fragment fade-in" src="images/flash_ram_cell.png">
-                <p class="fragment fade-in">Information wird im Floating-Gate
-                    gespeichert</p>
-                <p class="fragment fade-in">Die Oxidschicht wird bei einem
-                    Löschzyklus beschädigt</p>
-                <p class="fragment fade-in">Anzahl an Löschzyklen variiert stark
-                    je nach Hersteller, Technik und Strukturgröße</p>
+                     src="images/flash_ram_cell.png">
+                <ul>
+                    <li class="fragment fade-in">Information wird im Floating-Gate
+                    gespeichert</li>
+                    <li class="fragment fade-in">Die Oxidschicht wird bei einem
+                    Löschzyklus beschädigt</li>
+                    <li class="fragment fade-in">Anzahl an Löschzyklen variiert stark
+                    je nach Hersteller, Technik und Strukturgröße</li>
+                </ul>
                 <aside class="notes">
                     <ul>
                         <li>Elektronen durchtunneln(mit hoher Spannung) die
@@ -358,13 +366,15 @@
             </section>
             <section>
                 <h3>Defektmanagement - Ansteuerlogik</h3>
-                <p class="fragment fade-in">Fehlererkennungs- und
-                    Fehlerkorrekturcodes auf Block-Ebene</p>
-                <p class="fragment fade-in">Ansteuerlogik zeigt Fehler an</p>
-                <p class="fragment fade-in">Treibersoftware markiert defekte
-                    Blöcke in einer Defekttabelle</p>
-                <p class="fragment fade-in">Berechnung und Steuerung der
-                    Schutzbits innerhalb der Ansteuerlogik</p>
+                <ul>
+                    <li class="fragment fade-in">Fehlererkennungs- und
+                    Fehlerkorrekturcodes auf Block-Ebene</li>
+                    <li class="fragment fade-in">Ansteuerlogik zeigt Fehler an</li>
+                    <li class="fragment fade-in">Treibersoftware markiert defekte
+                    Blöcke in einer Defekttabelle</li>
+                    <li class="fragment fade-in">Berechnung und Steuerung der
+                    Schutzbits innerhalb der Ansteuerlogik</li>
+                </ul>
                 <aside class="notes">
                     <ul>
                         <li>Speicherung zusätzlicher Bits zu jedem Block um
@@ -385,9 +395,11 @@
             </section>
             <section>
                 <h3>Defektmanagement - Software</h3>
-                <p class="fragment fade-in">Gleichmäßige Verteilung der Operationen über die Treibersoftware</p>
-                <p class="fragment fade-in">Verwendung von "Wear-Leveling-Algorithmen" zur gleichmäßigen Abnutzung</p>
-                <p class="fragment fade-in">Varianten für Treiber- und Dateisystemebene</p>
+                <ul>
+                    <li class="fragment fade-in">Gleichmäßige Verteilung der Operationen über die Treibersoftware</li>
+                    <li class="fragment fade-in">Verwendung von "Wear-Leveling-Algorithmen" zur gleichmäßigen Abnutzung</li>
+                    <li class="fragment fade-in">Varianten für Treiber- und Dateisystemebene</li>
+                </ul>
                 <aside class="notes">
                     <ul>
                         <li>Schreib- und Löschaktionen möglichst gleichmäßig über den Speicherbereich eines Bausteins verteilen</li>
@@ -401,12 +413,15 @@
                 <h3>Vor- und Nachteile</h3>
             </section>
             <section>
-                <p class="fragment fade-in">Nichtflüchtiges Speichermedium</p>
-                <p class="fragment fade-in">Mechanische Robustheit</p>
-                <p class="fragment fade-in">Geringer Energieverbrauch</p>
-                <p class="fragment fade-in">Niedrige Wärmeentwicklung</p>
-                <p class="fragment fade-in">Geräuschlos</p>
-                <p class="fragment fade-in">Geschwindigkeit</p>
+                <h3>Vorteile</h3>
+                <ul>
+                    <li class="fragment fade-in">Nichtflüchtiges Speichermedium</li>
+                    <li class="fragment fade-in">Mechanische Robustheit</li>
+                    <li class="fragment fade-in">Geringer Energieverbrauch</li>
+                    <li class="fragment fade-in">Niedrige Wärmeentwicklung</li>
+                    <li class="fragment fade-in">Geräuschlos</li>
+                    <li class="fragment fade-in">Geschwindigkeit</li>
+                </ul>
                  <aside class="notes">
                     <ul>
                         <li>Konkurrenz zu Festplatten, optischen Speichern</li>
@@ -425,11 +440,14 @@
                 </aside>
             </section>
             <section>
-                <p class="fragment fade-in">Langsamer als nicht-flüchtiger Speicher</p>
-                <p class="fragment fade-in">NAND ist kompakt, aber langsam</p>
-                <p class="fragment fade-in">NOR ist nur im Schreiben langsam, aber groß</p>
-                <p class="fragment fade-in">Kosten</p>
-                <p class="fragment fade-in">Fehleranfälligkeit</p>
+                <h3>Nachteile</h3>
+                <ul>
+                    <li class="fragment fade-in">Langsamer als nicht-flüchtiger Speicher</li>
+                    <li class="fragment fade-in">NAND ist kompakt, aber langsam</li>
+                    <li class="fragment fade-in">NOR ist nur im Schreiben langsam, aber groß</li>
+                    <li class="fragment fade-in">Kosten</li>
+                    <li class="fragment fade-in">Fehleranfälligkeit</li>
+                </ul>
                  <aside class="notes">
                     <ul>
                         <li>Kann nicht mit flüchtigem Speicher mithalten, z.B. RAM/CPU Cache</li>
