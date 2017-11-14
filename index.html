@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -26,7 +27,7 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section>
+        <section id="main">
             <h1>Flash-Speicher</h1>
             <p>Lukas Jung & Michael Wolz</p>
             <p>15. November 2017</p>
@@ -34,11 +35,12 @@
                 Grundlagen, Geschichte, Funktionsprinzip, Architekturen, Löschen, Vor- und Nachteile
             </aside>
         </section>
-        <section>
+        <section id="grundlagen">
             <h3>Grundlagen</h3>
             <ul>
                 <li>Genaue Bezeichnung: <strong>Flash-EEPROM</strong></li>
                 <li>Nicht flüchtiger Speicher mit niedrigem Energieverbrauch</li>
+                <li>Byteweise adressierbar und blockweise beschreib- & löschbar</li>
                 <li>Beispiele: SSDs, USB-Sticks, Speicherkarten, Smartphone</li>
             </ul>
             <div class="fragment fade-in" style="margin-top: 40px">
@@ -49,7 +51,7 @@
             </div>
         </section>
         <section>
-            <section>
+            <section id="geschichte-1">
                 <h3>Geschichte</h3>
                 <ul>
                     <li>1980: NOR-Flash Speicher wird von Toshiba entwickelt</li>
@@ -64,21 +66,46 @@
                     </ul>
                 </ul>
             </section>
-            <section>
+            <section id="geschichte-2">
                 <h3>Geschichte</h3>
-                <ul>
-                    <li>Wieso  <i class="fa fa-bolt" aria-hidden="true" style="color: #ffc425"></i>Flash<i class="fa fa-bolt" aria-hidden="true" style="color: #ffc425"></i>-Speicher?</li>
-                    <ul class="fragment fade-in">
-                        <li>Löschvorgang erinnerte Entwickler an Kamerablitz</li>
-                    </ul>
-                    <li></li>
-                </ul>
+
+                <p>Wieso <i class="fa fa-bolt yellow"></i>Flash<i class="fa fa-bolt yellow"></i>-Speicher?
+                </p>
+
+                <p class="fragment fade-in">Löschvorgang erinnerte Entwickler an Kamerablitz</p>
             </section>
         </section>
         <section>
+            <section id="fuktionsprinzip-allgemein">
+                <h3>Funktionsprinzip</h3>
 
-            <h3>Funktionsprinzip</h3>
-
+                <ul>
+                    <li>Bits werden in Speichereinheit in Form von elekt. Ladungen gespeichert</li>
+                    <li>Zwei verschiedene Technologien:</li>
+                    <ul class="fragment fade-in">
+                        <li>Floating-Gate</li>
+                        <li>Charge-Trapping-Speicherelement<br>
+                            <small>
+                                <i class="fa fa-plus green" style="margin-right: 10px"></i> höhere Speicherdichte<br>
+                                <i class="fa fa-minus red" style="margin-right: 10px"></i> teurer in der Herstellung
+                            </small>
+                        </li>
+                    </ul>
+                </ul>
+            </section>
+            <section id="funktionsprinzip-floating-gate" data-background-image="images/Floating-Gate.svg" data-background-size="contain">
+                <h3>Floating-Gate-Transistor (FGMOS)</h3>
+                <aside class="notes">
+                    <ul>
+                        <li>Floating-Gate: spez. Transistoren für nichtflüchtige Speicher</li>
+                        <li>Feldeffektransitoren aus Silicium</li>
+                        <li></li>
+                    </ul>
+                </aside>
+            </section>
+            <section id="funktionsprinzip-2">
+                <h3>Funktionsprinzip</h3>
+            </section>
         </section>
         <section>
             <section>
@@ -101,6 +128,13 @@
             <h2>Vielen Dank für Ihre Aufmerksamkeit</h2>
             <img src="https://media.giphy.com/media/pVe8bu4l12iT6/giphy.gif" width="300px">
         </section>
+        <section id="quellenangaben">
+            <ul>
+                <li>https://de.wikipedia.org/wiki/Flash-Speicher</li>
+                <li>https://en.wikipedia.org/wiki/Flash_memory</li>
+                <li>http://www.itwissen.info/Flash-Speicher-flash-memory.html</li>
+            </ul>
+        </section>
     </div>
 </div>
 
@@ -112,6 +146,7 @@
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+        center: false,
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},
